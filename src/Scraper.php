@@ -74,7 +74,8 @@ class Scraper
             $httpClient = $this->getHttpClient();
             $crawler = $httpClient->request('GET', self::TRUSTPILOT_BASE_URL . sprintf(self::TRUSTPILOT_REVIEWS_PATH, $this->website, 1));
 
-            $this->reviewCount = (int)$crawler->filter('.ratingCount')->text();
+            $reviewsNumber = $crawler->filter('[data-reviews-count-typography="true"]')->text();
+            $this->reviewCount = (int) explode(' ', $reviewsNumber)[0];
         }
 
         return $this->reviewCount;
