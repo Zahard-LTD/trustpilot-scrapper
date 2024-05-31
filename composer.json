@@ -1,5 +1,5 @@
 {
-    "name": "loevgaard/trustpilot-scraper",
+    "name": "zahard-ltd/trustpilot-scraper",
     "description": "A web scraper for scraping reviews on Trustpilot",
     "type": "library",
     "license": "MIT",
