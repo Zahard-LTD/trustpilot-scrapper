@@ -1,5 +1,6 @@
 {
     "name": "zahard-ltd/trustpilot-scraper",
+    "version": "1.0.1",
     "description": "A web scraper for scraping reviews on Trustpilot",
     "type": "library",
     "license": "MIT",
