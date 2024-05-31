@@ -1,18 +1,13 @@
 <?php
 
-namespace Loevgaard\Trustpilot\Tests;
+namespace Zahard\Trustpilot\Tests;
 
-use Loevgaard\Trustpilot\Review\Review;
-use Loevgaard\Trustpilot\Scraper;
+use Zahard\Trustpilot\Review\Review;
+use Zahard\Trustpilot\Scraper;
 use PHPUnit\Framework\TestCase;
 
 class ScraperTest extends TestCase
 {
-    protected function setUp()
-    {
-
-    }
-
     public function testGetReviews()
     {
         $scraper = new Scraper('www.amazon.com');

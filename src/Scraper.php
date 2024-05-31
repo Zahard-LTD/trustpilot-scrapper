@@ -1,10 +1,10 @@
 <?php
 
-namespace Loevgaard\Trustpilot;
+namespace Zahard\Trustpilot;
 
-use Goutte\Client;
-use Loevgaard\Trustpilot\Review\Review;
-use Loevgaard\Trustpilot\Review\User;
+use Symfony\Component\BrowserKit\HttpBrowser;
+use Zahard\Trustpilot\Review\Review;
+use Zahard\Trustpilot\Review\User;
 use Symfony\Component\DomCrawler\Crawler;
 
 class Scraper
@@ -19,7 +19,7 @@ class Scraper
     /**
      * We use the Goutte library for scraping
      *
-     * @var Client
+     * @var HttpBrowser
      */
     private $httpClient;
 
@@ -141,11 +141,11 @@ class Scraper
     }
 
     /**
-     * @return Client
+     * @return HttpBrowser
      */
     private function getHttpClient() {
         if(!$this->httpClient) {
-            $this->httpClient = new Client();
+            $this->httpClient = new HttpBrowser();
         }
 
         return $this->httpClient;

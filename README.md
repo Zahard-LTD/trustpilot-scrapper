@@ -3,17 +3,17 @@ A PHP scraper for scraping Trustpilot reviews, trust score and review count
 
 ## Installation
 
-Add `loevgaard/trustpilot-scraper` as a dependency in your `composer.json` file:
+Add `zahard/trustpilot-scraper` as a dependency in your `composer.json` file:
 
 ```
-composer require loevgaard/trustpilot-scraper
+composer require zahard/trustpilot-scraper
 ```
 
 ## Usage
-Create an instance of `Loevgaard\Trustpilot\Scraper`:
+Create an instance of `Zahard\Trustpilot\Scraper`:
 
 ```php
-use Loevgaard\Trustpilot\Scraper;
+use Zahard\Trustpilot\Scraper;
 
 $scraper = new Scraper('www.amazon.com'); // this will scrape https://www.trustpilot.com/review/www.amazon.com
 ```
@@ -22,7 +22,7 @@ To get all reviews:
 
 ```php
 foreach($scraper->getReviews() as $review) {
-    /** @var \Loevgaard\Trustpilot\Review\Review $review */
+    /** @var \Zahard\Trustpilot\Review\Review $review */
     
     var_dump($review);
     var_dump($review->getUser());
@@ -33,7 +33,7 @@ To get reviews on the first page:
 
 ```php
 foreach($scraper->getReviews(1) as $review) {
-    /** @var \Loevgaard\Trustpilot\Review\Review $review */
+    /** @var \Zahard\Trustpilot\Review\Review $review */
     
     var_dump($review);
     var_dump($review->getUser());

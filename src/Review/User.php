@@ -1,6 +1,6 @@
 <?php
 
-namespace Loevgaard\Trustpilot\Review;
+namespace Zahard\Trustpilot\Review;
 
 class User
 {
